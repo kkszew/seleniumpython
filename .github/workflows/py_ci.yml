@@ -1,0 +1,23 @@
+name: Python CI
+
+
+on:
+ pull_request:
+   branches:
+     - master
+
+
+jobs:
+ install:
+   runs-on: ubuntu-latest
+   steps:
+   - name: Git clone
+     uses: actions/checkout@v3
+   - name: Setup python 10
+     uses: actions/setup-python@v4
+     with:
+       python-version: '3.10'
+   - name: Install reqs
+     run: pip install requirements.txt
+   - name: Run unit tests test_math.py
+     run: pytest test_math.py
