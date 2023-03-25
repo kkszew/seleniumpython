@@ -18,6 +18,6 @@ jobs:
      with:
        python-version: '3.10'
    - name: Install reqs
-     run: pip install requirements.txt
+     run: pip install -r requirements.txt
    - name: Run unit tests test_math.py
      run: pytest test_math.py
