@@ -20,4 +20,4 @@ jobs:
    - name: Install reqs
      run: pip install -r requirements.txt
    - name: Run unit tests test_math.py
-     run: pytest test_math.py
+     run: pytest tests/test_math.py
